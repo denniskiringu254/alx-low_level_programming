@@ -33,9 +33,6 @@ char *strcpy(char *dest, char *src)
 }
 /**
  * new_dog - create new instance of struct dog
- * @name: member
- * @age: member
- * @owner: member
  * Return: initialized instance of struct dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
@@ -44,13 +41,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *copy_of_name;
 	char *copy_of_owner;
 
-	dog1 = malloc(sizeof(dog_t)); /* if dog1 initiated correctly, validate */
+	dog1 = malloc(sizeof(dog_t)); /* validate if dog1 initiated correctly */
 	if (dog1 == NULL)
 		return (NULL);
 
 	dog1->age = age;
 
-	/* create and validate copies of struct members, else free on error */
+	/* make copies of struct members and validate, else free on error */
 	/* set values of struct members to copies of arguments or set to NULL */
 	if (name != NULL)
 	{
